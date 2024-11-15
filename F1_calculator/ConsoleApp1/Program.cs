@@ -1,6 +1,5 @@
-﻿int num1;
+int num1;
 int num2;
-int result;
 string function;
 bool keep = true;
 
@@ -8,10 +7,15 @@ bool keep = true;
 //===============================================================================================//
 
 Console.WriteLine("welcome to my calculator....., how can i help you.....");
-Console.WriteLine("'a' for addition, 's' for subtration, 'm' for multipation, 'd' for divsion");
+Console.WriteLine("'a' for addition, 's' for subtration, 'm' for multipation, 'd' for divsion, 'q' for exit");
 function = Console.ReadLine();
 
 //===============================================================================================//
+
+// This is my first ever project in c# it is just a simple calculator......
+
+//===============================================================================================//
+while(keep){
 
 Console.WriteLine("Enter you num1");
 num1 = int.Parse(Console.ReadLine());
@@ -19,9 +23,8 @@ num1 = int.Parse(Console.ReadLine());
 Console.WriteLine("Enter you num2");
 num2 = int.Parse(Console.ReadLine());
 
-//===============================================================================================//
-while(keep){
-if (function =="A"){
+
+if (function =="a"){
     Console.WriteLine(num1 + num2);
 }
 
@@ -40,16 +43,24 @@ else if (function == "d"){
         Console.WriteLine(num1 / num2);
 }
 
-else {
+else{
     Console.WriteLine("please enter the valid finction");
 }
-Console.WriteLine("want to continue y/n");
-string choice = Console.ReadLine();
-if (choice.ToLower() != "y"){
-    keep = false;
-}
 
+Console.WriteLine("do you want to continue... y/n");
+string choice = Console.ReadLine();
+if (choice != "y") {
+    break;
 }
+else{
+    continue;
+}
+}
+//================================================END OF MY FIRST PROJECT========================================================//
+
+
+
+
 
 
 
